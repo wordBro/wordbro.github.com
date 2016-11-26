@@ -90,7 +90,7 @@
 <meta property="og:url" content="/2016/11/26/初识Vue/index.html">
 <meta property="og:site_name" content="前端er">
 <meta property="og:description" content="当初刚学习Vue的第一天，准备加入一个群，还记得加群问题是Vue可以实现数据绑定么？我心头一颤，怎样才能别出心裁呢，我写了个必须能，竟然显示回答错误。之后老老实实的写了个能，就进群了，闲扯完结，进入正题。">
-<meta property="og:updated_time" content="2016-11-26T13:25:30.164Z">
+<meta property="og:updated_time" content="2016-11-26T15:13:15.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识Vue">
 <meta name="twitter:description" content="当初刚学习Vue的第一天，准备加入一个群，还记得加群问题是Vue可以实现数据绑定么？我心头一颤，怎样才能别出心裁呢，我写了个必须能，竟然显示回答错误。之后老老实实的写了个能，就进群了，闲扯完结，进入正题。">
@@ -318,8 +318,11 @@
       
 
       
-        <p>当初刚学习Vue的第一天，准备加入一个群，还记得加群问题是Vue可以实现数据绑定么？我心头一颤，怎样才能别出心裁呢，我写了个必须能，竟然显示回答错误。之后<br>老老实实的写了个能，就进群了，闲扯完结，进入正题。<br><a id="more"></a><br>Vue.js 是通过尽可能简单的而API实现响应的数据绑定和组合的试图组件。<br>v-bind 属性被称为指令 v-bind的缩写形式为：<br>v-if   其实就如同一条判断语句一样 布尔值判断其是否出现。<br>v-for  绑定数据来渲染一个列表，形如：v-for=”item in items” items其实是包含只一组数据的数组，里面的内容可用json写。items是源数据组，item是数组元素迭代的别名。<br>v-on   可缩写为@ 。<br>v-once 能执行一次性的插值，数据改变时，插值处的内容不会更新。影响到该节点上的所有数据绑定。<br>v-html 能够输出真正的HTML。<br>v-model能够将表单输入与应用状态中做双线数据绑定。<br>v-show 的元素会始终渲染在DOM中，它的原理是改变display属性。不支持<teplate>语法。<br>看过了简单的指令，来了解用数组构建应用<br>子元素通过props接口实现与父亲元素很好的解耦，官方文档中<li>便是<todo-item>的子组件<br>在实例化Vue时，需要传入一个选项对象（依旧懵），冥冥中感觉这句话很抽象。<br>Vue实例暴露了一些有用的实例属性与方法，使用前缀$。<br>Vue中el:’#example’,相当于我们原生中的获取元素。突然领悟的<span style="color:red;">!!!</span><br>组件适合担任UI重用与复核的基本单元。<br>双花括号不能用在代码内部的属性中 因该用 v-bind。例如：<div v-bind:id="'list-'+id"></div>。<br>过滤器只能在双花括号绑定中使用，为了在指令绑定中实现同样的行为，可使用计算属性。<br>指令的职责是将表达式的值改变相应的应用到DOM上。<br>修饰符是以半角句号.指明的特殊后缀<br>计算属性是基于它的依赖缓存，官方实例中reversedmessage是基于message去做出改变的。<br>如果不希望有缓存，请用method替代。</todo-item></li></teplate></p>
-<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"><br></div><br>注意：active没有加单引号；text-danger加单引号。<br>绑定样式通常绑定在对象上，这样更加清晰。<br><div v-bind:style="styleObject"></div><br>data: {<br>  styleObject: {<br>    color: ‘red’,<br>    fontSize: ‘13px’<br>  }<br>}<br>object是json格式，引起注意。<br><ul id="repeat-object" class="demo"><br>  <li v-for="value in object"><br>    <br>  </li><br></ul><br><br>new Vue({<br>  el: ‘#repeat-object’,<br>  data: {<br>    object: {<br>      FirstName: ‘John’,<br>      LastName: ‘Doe’,<br>      Age: 30<br>    }<br>  }<br>})<br>我们不能把数据用v-for传递到组件里，因为组件有自己独立的作用域。为了传递迭代数据到组件里，我们要用props：<br><div v-for="item in items" :key="item.id"><br>  <!-- 内容 --><br></div>
+        <p>当初刚学习Vue的第一天，准备加入一个群，还记得加群问题是Vue可以实现数据绑定么？我心头一颤，怎样才能别出心裁呢，我写了个必须能，竟然显示回答错误。之后老老实实的写了个能，就进群了，闲扯完结，进入正题。<br><a id="more"></a><br>Vue.js 是通过尽可能简单的API实现响应的数据绑定和组合的视图组件。<br>v-bind 属性被称为指令 v-bind的缩写形式为：。<br>v-if   其实就如同一条判断语句一样 布尔值判断其是否出现。<br>v-for  绑定数据来渲染一个列表，形如：v-for=”item in items” items其实是包含只一组数据的数组，里面的内容可用json写。items是源数据组，item是数组元素迭代的别名。<br>v-on   可缩写为@ 。<br>v-once 能执行一次性的插值，数据改变时，插值处的内容不会更新。影响到该节点上的所有数据绑定。<br>v-html 能够输出真正的HTML。<br>v-model能够将表单输入与应用状态中做双线数据绑定。<br>v-show 的元素会始终渲染在DOM中，它的原理是改变display属性。不支持<teplate>语法。<br>看过了简单的指令，来了解用数组构建应用<br>子元素通过props接口实现与父亲元素很好的解耦，官方文档中li标签便是todo-item标签的子组件<br>在实例化Vue时，需要传入一个选项对象（依旧懵），冥冥中感觉这句话很抽象。<br>Vue实例暴露了一些有用的实例属性与方法，使用前缀$。<br>Vue中el:’#example’,相当于我们原生中的获取元素。突然领悟的<span style="color:red;">!!!</span><br>组件适合担任UI重用与复核的基本单元。<br>双花括号不能用在代码内部的属性中 因该用 v-bind。例如：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> v-bind:<span class="built_in">id</span>=<span class="string">"'list-'+id"</span>&gt;&lt;/<span class="keyword">div</span>&gt;。</div></pre></td></tr></table></figure></teplate></p>
+<p>过滤器只能在双花括号绑定中使用，为了在指令绑定中实现同样的行为，可使用计算属性。<br>指令的职责是将表达式的值改变相应的应用到DOM上。<br>修饰符是以半角句号.指明的特殊后缀<br>计算属性是基于它的依赖缓存，官方实例中reversedmessage是基于message去做出改变的。<br>如果不希望有缓存，请用method替代。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"static"</span></div><div class="line">     v-bind:<span class="class"><span class="keyword">class</span></span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<p>注意：active没有加单引号；text-danger加单引号。<br>绑定样式通常绑定在对象上，这样更加清晰。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">div</span> v-bind:style=<span class="string">"styleObject"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">data: &#123;</div><div class="line">  styleObject: &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="string">'red'</span>,</div><div class="line">    fontSize: <span class="string">'13px'</span></div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>object是json格式，引起注意。<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=<span class="string">"repeat-object"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"demo"</span>&gt;</div><div class="line">  &lt;li v-<span class="keyword">for</span>=<span class="string">"value in object"</span>&gt;</div><div class="line">    &#123;&#123; value &#125;&#125;</div><div class="line">  &lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="type">Vue</span>(&#123;</div><div class="line">  el: '#repeat-<span class="class"><span class="keyword">object</span>',</span></div><div class="line">  data: &#123;</div><div class="line">    <span class="class"><span class="keyword">object</span></span>: &#123;</div><div class="line">      <span class="type">FirstName</span>: <span class="symbol">'Joh</span>n',</div><div class="line">      <span class="type">LastName</span>: <span class="symbol">'Do</span>e',</div><div class="line">      <span class="type">Age</span>: <span class="number">30</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>我们不能把数据用v-for传递到组件里，因为组件有自己独立的作用域。为了传递迭代数据到组件里，我们要用props：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div v-<span class="keyword">for</span>=<span class="string">"item in items"</span> :key=<span class="string">"item.id"</span>&gt;</div><div class="line">  <span class="xml"><span class="comment">&lt;!-- 内容 --&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -361,10 +364,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/26/岁月神偷/" rel="prev" title="岁月神偷">
-                岁月神偷 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -427,7 +426,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
