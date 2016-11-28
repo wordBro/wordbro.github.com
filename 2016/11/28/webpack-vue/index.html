@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="世上哪有那么多的一帆风顺 不过是有人替你负重前行...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端er">
-<meta property="og:url" content="/index.html">
+<meta name="description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
+所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
+安装项目依赖12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack+vue">
+<meta property="og:url" content="/2016/11/28/webpack-vue/index.html">
 <meta property="og:site_name" content="前端er">
-<meta property="og:description" content="世上哪有那么多的一帆风顺 不过是有人替你负重前行...">
+<meta property="og:description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
+所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
+安装项目依赖12">
+<meta property="og:updated_time" content="2016-11-28T08:18:33.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端er">
-<meta name="twitter:description" content="世上哪有那么多的一帆风顺 不过是有人替你负重前行...">
+<meta name="twitter:title" content="webpack+vue">
+<meta name="twitter:description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
+所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
+安装项目依赖12">
 
 
 
@@ -120,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="/"/>
+  <link rel="canonical" href="/2016/11/28/webpack-vue/"/>
 
 
 
 
 
-  <title> 前端er </title>
+  <title> webpack+vue | 前端er </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -147,9 +154,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +233,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -263,10 +268,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/28/webpack-vue/" itemprop="url">
-                  webpack+vue
-                </a>
+                webpack+vue
               
             
           </h1>
@@ -322,23 +324,25 @@
       
 
       
-        
-          
-            <p>使用过Grunt、Glup的人一定很熟悉这条命令。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> init</div><div class="line"><span class="built_in">npm</span> init -y</div></pre></td></tr></table></figure></p>
+        <p>使用过Grunt、Glup的人一定很熟悉这条命令。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> init</div><div class="line"><span class="built_in">npm</span> init -y</div></pre></td></tr></table></figure></p>
 <p>所有的项目依赖，都是通过npm来管理。<br>创建一个简单的项目目录：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+app</div><div class="line">    +index</div><div class="line">        components</div><div class="line">        index<span class="selector-class">.html</span></div><div class="line">        index<span class="selector-class">.js</span></div><div class="line">+build</div><div class="line">    webpack<span class="selector-class">.config</span><span class="selector-class">.js</span></div><div class="line">package.json</div></pre></td></tr></table></figure></p>
 <p>安装项目依赖<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install </span>webpack webpack-dev-server vue-loader vue-html-loader css-loader vue-style-loader vue-hot-reload-api <span class="keyword">babel-loader </span><span class="keyword">babel-core </span><span class="keyword">babel-plugin-transform-runtime </span><span class="keyword">babel-preset-es2015 </span><span class="keyword">babel-runtime@5 </span>--save-dev</div><div class="line"></div><div class="line">npm <span class="keyword">install </span>vue --save</div></pre></td></tr></table></figure></p>
 <p>安装不同loader包，去加载不同类型的文件<br>我最外层的文件夹命名是webpack导致失败了，install失败，不要踩坑。<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// nodejs 中的path模块</span></div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">// 入口文件，path.resolve()方法，可以结合我们给定的两个参数最后生成绝对路径，最终指向的就是我们的index.js文件</span></div><div class="line">    entry: path.resolve(__dirname, <span class="string">'../app/index/index.js'</span>),</div><div class="line">    <span class="comment">// 输出配置</span></div><div class="line">    output: &#123;</div><div class="line">        <span class="comment">// 输出路径是 myProject/output/static</span></div><div class="line">        path: path.resolve(__dirname, <span class="string">'../output/static'</span>),</div><div class="line">        publicPath: <span class="string">'static/'</span>,</div><div class="line">        filename: <span class="string">'[name].[hash].js'</span>,</div><div class="line">        chunkFilename: <span class="string">'[id].[chunkhash].js'</span></div><div class="line">    &#125;,</div><div class="line">    resolve: &#123;</div><div class="line">        extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.vue'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">module</span>: &#123;</div><div class="line">        </div><div class="line">        loaders: [</div><div class="line">            <span class="comment">// 使用vue-loader 加载 .vue 结尾的文件</span></div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.vue$/</span>, </div><div class="line">                loader: <span class="string">'vue'</span>   </div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.js$/</span>,</div><div class="line">                loader: <span class="string">'babel?presets=es2015'</span>,</div><div class="line">                exclude: <span class="regexp">/node_modules/</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">webpack --display-modules --display-chunks --config build/webpack.config.js</div></pre></td></tr></table></figure></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -347,403 +351,34 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="/2016/11/27/Vue第二弹/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="都增刚">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.JPG">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="前端er">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="前端er" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/11/27/Vue第二弹/" rel="next" title="Vue第二弹">
+                <i class="fa fa-chevron-left"></i> Vue第二弹
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/11/27/Vue第二弹/" itemprop="url">
-                  Vue第二弹
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-27T08:29:23+08:00">
-                2016-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/11/27/Vue第二弹/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/27/Vue第二弹/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><img src="http://p1.bqimg.com/4851/6fa3af326c7698c2.jpg" width="100%"><br>v-on 提供了事件修饰符。用点表示的指令后缀来调用修饰符。<br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/27/Vue第二弹/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="/2016/11/26/初识Vue/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="都增刚">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.JPG">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="前端er">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="前端er" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/初识Vue/" itemprop="url">
-                  初识Vue
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-26T17:14:12+08:00">
-                2016-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/11/26/初识Vue/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/初识Vue/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>当初刚学习Vue的第一天，准备加入一个群，还记得加群问题是Vue可以实现数据绑定么？我心头一颤，怎样才能别出心裁呢，我写了个必须能，竟然显示回答错误。之后老老实实的写了个能，就进群了，闲扯完结，进入正题。<br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/26/初识Vue/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="/2016/11/25/尼克-杨/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="都增刚">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.JPG">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="前端er">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="前端er" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/25/尼克-杨/" itemprop="url">
-                  尼克.杨
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-25T23:18:52+08:00">
-                2016-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/11/25/尼克-杨/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/25/尼克-杨/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://i1.piimg.com/4851/0158360c693877be.jpg" width="100%"  /><br>在终场前的最后五秒前完成准绝杀<br>抢断队友 无疑也是给自己加上了重担<br>赛后雷霆主教练认为这球有走步嫌疑<br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/25/尼克-杨/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -751,6 +386,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/28/webpack-vue/"
+           data-title="webpack+vue" data-url="/2016/11/28/webpack-vue/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -944,6 +587,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
