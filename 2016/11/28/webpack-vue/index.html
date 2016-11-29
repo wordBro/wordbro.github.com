@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -85,21 +85,18 @@
 
 
 <meta name="description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
-所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
-安装项目依赖12">
+所有的项目依赖，都是通过npm来管理。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack+vue">
 <meta property="og:url" content="/2016/11/28/webpack-vue/index.html">
 <meta property="og:site_name" content="前端er">
 <meta property="og:description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
-所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
-安装项目依赖12">
-<meta property="og:updated_time" content="2016-11-28T08:18:33.990Z">
+所有的项目依赖，都是通过npm来管理。">
+<meta property="og:updated_time" content="2016-11-29T00:05:33.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack+vue">
 <meta name="twitter:description" content="使用过Grunt、Glup的人一定很熟悉这条命令。12npm initnpm init -y
-所有的项目依赖，都是通过npm来管理。创建一个简单的项目目录：12345678+app    +index        components        index.html        index.js+build    webpack.config.jspackage.json
-安装项目依赖12">
+所有的项目依赖，都是通过npm来管理。">
 
 
 
@@ -325,7 +322,7 @@
 
       
         <p>使用过Grunt、Glup的人一定很熟悉这条命令。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> init</div><div class="line"><span class="built_in">npm</span> init -y</div></pre></td></tr></table></figure></p>
-<p>所有的项目依赖，都是通过npm来管理。<br>创建一个简单的项目目录：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+app</div><div class="line">    +index</div><div class="line">        components</div><div class="line">        index<span class="selector-class">.html</span></div><div class="line">        index<span class="selector-class">.js</span></div><div class="line">+build</div><div class="line">    webpack<span class="selector-class">.config</span><span class="selector-class">.js</span></div><div class="line">package.json</div></pre></td></tr></table></figure></p>
+<p>所有的项目依赖，都是通过npm来管理。<br><a id="more"></a><br>创建一个简单的项目目录：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+app</div><div class="line">    +index</div><div class="line">        components</div><div class="line">        index<span class="selector-class">.html</span></div><div class="line">        index<span class="selector-class">.js</span></div><div class="line">+build</div><div class="line">    webpack<span class="selector-class">.config</span><span class="selector-class">.js</span></div><div class="line">package.json</div></pre></td></tr></table></figure></p>
 <p>安装项目依赖<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install </span>webpack webpack-dev-server vue-loader vue-html-loader css-loader vue-style-loader vue-hot-reload-api <span class="keyword">babel-loader </span><span class="keyword">babel-core </span><span class="keyword">babel-plugin-transform-runtime </span><span class="keyword">babel-preset-es2015 </span><span class="keyword">babel-runtime@5 </span>--save-dev</div><div class="line"></div><div class="line">npm <span class="keyword">install </span>vue --save</div></pre></td></tr></table></figure></p>
 <p>安装不同loader包，去加载不同类型的文件<br>我最外层的文件夹命名是webpack导致失败了，install失败，不要踩坑。<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// nodejs 中的path模块</span></div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">// 入口文件，path.resolve()方法，可以结合我们给定的两个参数最后生成绝对路径，最终指向的就是我们的index.js文件</span></div><div class="line">    entry: path.resolve(__dirname, <span class="string">'../app/index/index.js'</span>),</div><div class="line">    <span class="comment">// 输出配置</span></div><div class="line">    output: &#123;</div><div class="line">        <span class="comment">// 输出路径是 myProject/output/static</span></div><div class="line">        path: path.resolve(__dirname, <span class="string">'../output/static'</span>),</div><div class="line">        publicPath: <span class="string">'static/'</span>,</div><div class="line">        filename: <span class="string">'[name].[hash].js'</span>,</div><div class="line">        chunkFilename: <span class="string">'[id].[chunkhash].js'</span></div><div class="line">    &#125;,</div><div class="line">    resolve: &#123;</div><div class="line">        extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.vue'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">module</span>: &#123;</div><div class="line">        </div><div class="line">        loaders: [</div><div class="line">            <span class="comment">// 使用vue-loader 加载 .vue 结尾的文件</span></div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.vue$/</span>, </div><div class="line">                loader: <span class="string">'vue'</span>   </div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.js$/</span>,</div><div class="line">                loader: <span class="string">'babel?presets=es2015'</span>,</div><div class="line">                exclude: <span class="regexp">/node_modules/</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">webpack --display-modules --display-chunks --config build/webpack.config.js</div></pre></td></tr></table></figure></p>
 
@@ -349,6 +346,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -363,6 +366,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/29/近一个月总结/" rel="prev" title="近一个月总结">
+                近一个月总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -425,7 +432,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -435,7 +442,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
