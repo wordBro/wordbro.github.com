@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>结婚管家--婚纱摄影</title>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body>
+		<div class="hlchwz">
+			结婚管家><span>婚纱摄影</span><a href="hospital_m/index.html">去吧</a>
+		</div>
+		<div class="hlchnr1 start_cent">
+            <div class="fg1">
+				“主人，您婚纱摄影的预算是多少？”
+			</div>
+			<div class="fgx1">小喵将根据您的预算，推荐高性价比的摄影方案</div>
+			<div class="hlchnrt1">
+				<ul>
+					<li class="li1"><span data-tit="4000元以内"></span>
+						<p>4000元以内</p>
+					</li>
+					<li class="li2"><span data-tit="4000-6000"></span>
+						<p>4000-6000</p>
+					</li>
+					<li class="li3" ><span data-tit="6000-8000"></span>
+						<p>6000-8000</p>
+					</li>
+					<li class="li4"><span data-tit="8000以上"></span>
+						<p>8000以上</p>
+					</li>
+				</ul>
+			</div>
+            
+			<div class="hlchxyb">
+				<a class="start">下一步</a>
+			</div>
+			<div class="dbx">
+				<p><img src="images/dbsz1.jpg" /></p>
+			</div>
+		</div>
+
+		<div class="hlchnr1 one_cent" style="display: none">
+				<div class="fghssy">
+				“主人，您想要的拍摄风格有哪些？”
+			</div>
+			<div class="fgxhssy">最多选3项，小喵会为你匹配，最擅长此风格的摄影师</div>
+			<div class="hssynrt">
+				<ul>
+					<li class="li1" ><span data-tit="森林系"></span>
+						<p>森林系</p>
+					</li>
+					<li class="li2" ><span data-tit="复古系"></span>
+						<p>复古系</p>
+					</li>
+					<li class="li3" ><span data-tit="韩系"></span>
+						<p>韩系</p>
+					</li>
+					<li class="li4" ><span data-tit="欧系"></span>
+						<p>欧系</p>
+					</li>
+                    					<li class="li5" ><span data-tit="画意"></span>
+						<p>画意</p>
+					</li>
+					<li class="li6" ><span data-tit="清新学院"></span>
+						<p>清新学院</p>
+					</li>
+					<li class="li7" ><span data-tit="中国风"></span>
+						<p>中国风</p>
+					</li>
+					<li class="li8" ><span data-tit="城市旅拍"></span>
+						<p>城市旅拍</p>
+					</li>
+				</ul>
+			</div>
+			<div class="hlchxyb">
+				<a class="one">下一步</a>
+			</div>
+			<div class="dbx">
+				<p><img src="images/dbsz2.jpg" /></p>
+			</div>
+		</div>
+
+		<div class="hlchnr1 end_cent" style="display: none;">
+			<div class="hlchysjg">
+				<div class="hlchysjgl">
+					您选择的预算:<span>4000-6000</span>
+				</div>
+				<div class="hlchysjgr">
+					您选择的风格：<span>浪漫</span>
+				</div>
+			</div>
+			<div class="fg1">
+				小喵已经为您挑选3套合适的摄影方案
+			</div>
+			<div class="fgx1">请留下您的联系方式，召唤顾问免费为您服务</div>
+			<div class="hlchnrjg">
+				<ul>
+					<li>
+						<dl><img src="images/gdhq.jpg" /></dl>
+						<dt><a>搞定婚宴档期</a></dt>
+					</li>
+					<li>
+						<dl><img src="images/yhlb.jpg" /></dl>
+						<dt><a>享优惠礼包</a></dt>
+					</li>
+					<li>
+						<dl><img src="images/txfw.jpg" /></dl>
+						<dt><a>全程贴心服务</a></dt>
+					</li>
+				</ul>
+			</div>
+			<div class="hlchly">
+				<div class="hlchtel"><input onfocus="if(this.value=='请输入您的手机号')this.value=''" onblur="if(this.value=='')this.value='请输入您的手机号'" value="请输入您的手机号"/></div>
+				<div class="hlchtj">
+					<a>立即获取免费方案</a>
+				</div>
+			</div>
+			<div class="dbx">
+				<p><img src="images/dbsz3.jpg" /></p>
+			</div>
+		</div>
+	</body>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	var status=false;
+	var bb='';
+	$('.hlchnrt1 ul li').click(function(){
+		$('.hlchnrt1 ul li').children('span').removeClass('on');
+		$(this).children('span').addClass('on');
+		//var aa=$(this).children(0).data('tit');
+		bb=$(this).children('p').html();
+		status=true;
+	});
+	
+	$('.start').click(function(){
+		if(status){
+			$('.start_cent').css('display','none');
+			$('.one_cent').css('display','block');
+		}else{
+			alert('请选择');
+		}
+	});
+	
+	var arr=[];
+	//删除数组中的某一个值
+	var removeFromArray = function (arr,val) {
+		var index = $.inArray(val,arr);//$.inArray函数返回的是索引值
+		if (index >= 0)  //如果有值返回下标 没有返回-1
+			arr.splice(index, 1);
+		return arr;
+	};
+	$('.hssynrt ul li').click(function(){
+		console.log($(this).children('span').hasClass('on'));
+		if($(this).children('span').hasClass('on')){
+			$(this).children('span').removeClass('on');
+			removeFromArray(arr,$(this).children('p').html());
+		}else{
+			if($('.hssynrt ul li span.on').length<3){
+				$(this).children('span').addClass('on');
+				arr.push($(this).children('p').html());
+				console.log(arr);
+			}
+		}
+	});
+	
+	$('.one').click(function(){
+		if($('.hssynrt ul li span.on').length==0){
+			alert('请选择');
+		}else{
+			$('.one_cent').css('display','none');
+			$('.end_cent').css('display','block');
+			$('.hlchysjgl span').html(bb);
+			$('.hlchysjgr span').html(arr.join(" "));
+		}
+	});
+});
+</script>
+</html>
